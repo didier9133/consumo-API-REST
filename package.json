@@ -1,0 +1,24 @@
+{
+  "name": "consumo-api-rest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/didier9133/consumo-API-REST.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/didier9133/consumo-API-REST/issues"
+  },
+  "homepage": "https://github.com/didier9133/consumo-API-REST#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
+}
