@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy":"gh-pages -d ."
+    "deploy": "gh-pages -d ."
   },
   "repository": {
     "type": "git",
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/didier9133/consumo-API-REST/issues"
   },
-  "homepage": "https://github.com/didier9133/consumo-API-REST#readme"
+  "homepage": "https://github.com/didier9133/consumo-API-REST#readme",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
