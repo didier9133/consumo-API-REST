@@ -13,11 +13,11 @@ const api=axios.create({
 
 
 async function getTrendingMovie(){
+    getMovieFavorites()
     if(page===1){
         const {data}=await api(`/trending/movie/day?`)
-        getMovieFavorites()
-        render(data.results, movieList, {lazy:true, clean:true})
         
+        render(data.results, movieList, {lazy:true, clean:true})
     }
 
 }
