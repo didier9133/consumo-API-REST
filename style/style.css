@@ -165,7 +165,6 @@ button {
 
 #lenguage{
   position: absolute;
-  top: 34px;
   right: 24px;
   color: var(--purple-dark-2);
   border: 1px solid var(--purple-medium-3);
@@ -173,7 +172,9 @@ button {
   padding: 4px;
   z-index: 10;
   transform: translatey(50%);
-  width: 72px;
+  width: 120px;
+  font-size: 16px;
+  font-weight: bold;
   
 }
 
@@ -197,7 +198,7 @@ button {
 } 
 
 .header-title {
-  margin-bottom: 16px;
+  margin: 16px 0;
 }
 
 .header-arrow {
@@ -461,6 +462,7 @@ footer {
   border-radius: 50%;
   background:var(--purple-dark-1);
   cursor: pointer;
+  color: var(--purple-light-1);
   
 }
 
