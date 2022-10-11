@@ -9,30 +9,64 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@700;800&family=Red+Hat+Display:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./style/style.css" />
+ 
 
   <title>NextMovies</title>
 </head>
 <body>
   <div id="full-container" >
+    <div>  
+      <select id="lenguage">
+        <option value="en">
+          lang...
+        </option>
+
+        <option value="en">
+            English
+        </option>
+        
+        <option value="pt-BR">
+            Portuguese Br
+        </option>                            
+        
+        <option value="es">
+            Spanish
+        </option>
+        
+      </select>
+      
+    </div>
     <header id="header" class="header-container">
       <span class="header-arrow inactive">&lt;</span>
       <h1 class="header-title">NextMovies</h1>
-      <h1 class="header-title header-title--categoryView inactive">Acción</h1>
+      <h1 class="header-title header-title--categoryView inactive">Trends</h1>
+    
 
       <form id="searchForm" class="header-searchForm">
-        <input type="text" placeholder="Vengadores" />
+        <input type="text" placeholder="Search..." />
         <button id="searchBtn">🔍</button>
       </form>
+
+  
+    
     </header>
+
 
     <section id="trendingPreview" class="trendingPreview-container">
       <div class="trendingPreview-header">
-        <h2 class="trendingPreview-title">Tendencias</h2>
-        <button class="trendingPreview-btn">Ver más</button>
+        <h2 class="trendingPreview-title">Trends</h2>
+        <button class="trendingPreview-btn">More</button>
       </div>
 
       <article class="trendingPreview-movieList" id="movieList">
-        <div class="movie-container">
+        
+        <div class="movie-container movie-container--loading"></div>
+
+        <div class="movie-container movie-container--loading"></div>
+
+        <div class="movie-container movie-container--loading"></div>
+
+        <!-- <div class="movie-container">
           <img
             src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
             class="movie-img"
@@ -54,15 +88,21 @@
             class="movie-img"
             alt="Nombre de la película"
           />
-        </div>
+        </div> -->
+      
       </article>
     </section>
 
     <section id="categoriesPreview" class="categoriesPreview-container">
-      <h2 class="categoriesPreview-title">Categorías</h2>
+      <h2 class="categoriesPreview-title">Categories</h2>
 
       <article class="categoriesPreview-list" id="genreList">
-        <div class="category-container">
+        <div class="movie-container category-container--loading"></div>
+
+        <div class="movie-container category-container--loading"></div>
+  
+        <div class="movie-container category-container--loading"></div>
+        <!-- <div class="category-container">
           <h3 id="id28" class="category-title">Romance</h3>
         </div>
 
@@ -72,12 +112,25 @@
 
         <div class="category-container">
           <h3 id="id14" class="category-title">Acción</h3>
-        </div>
+        </div> -->
       </article>
     </section>
 
     <section id="genericList" class="genericList-container inactive">
-      <div class="movie-container">
+      <div class="movie-container movie-container--loading"></div>
+
+      <div class="movie-container movie-container--loading"></div>
+
+      <div class="movie-container movie-container--loading"></div>
+      <!-- <div id="prueba" class="genericList-container inactive">
+        <div class="movie-container movie-container--loadigd"></div>
+
+        <div class="movie-container movie-container--loading"></div>
+  
+        <div class="movie-container movie-container--loading"></div>
+      </div> -->
+   
+      <!-- <div class="movie-container">
         <img
           src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
           class="movie-img"
@@ -99,7 +152,7 @@
           class="movie-img"
           alt="Nombre de la película"
         />
-      </div>
+      </div> -->
     </section>
 
     <section id="movieDetail" class="movieDetail-container inactive">
@@ -113,7 +166,13 @@
       </div> 
       
       <article class="categories-list">   
-        <div class="category-container">
+        <div class="movie-container category-container--loading"></div>
+
+        <div class="movie-container category-container--loading"></div>
+  
+        <div class="movie-container category-container--loading"></div>
+        
+        <!-- <div class="category-container">
           <h3 id="id28" class="category-title">Romance</h3>
         </div>
 
@@ -123,14 +182,20 @@
 
         <div class="category-container">
           <h3 id="id14" class="category-title">Acción</h3>
-        </div>
+        </div> -->
       </article>
 
       <article class="relatedMovies-container">
-        <h2 class="relatedMovies-title">Películas similares</h2>
+        <h2 class="relatedMovies-title">Our Recommendations</h2>
 
         <div class="relatedMovies-scrollContainer">
-          <div class="movie-container">
+          <div class="movie-container movie-container--loading"></div>
+
+          <div class="movie-container movie-container--loading"></div>
+    
+          <div class="movie-container movie-container--loading"></div>
+          
+          <!-- <div class="movie-container">
             <img
               src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
               class="movie-img"
@@ -152,12 +217,29 @@
               class="movie-img"
               alt="Nombre de la película"
             />
-          </div>
+          </div> -->
         </div>
       </article>
     </section>
 
-    <footer>Realizado por @Decs_Code!</footer>
+    <section id="trendingFavorites" class="trendingFavorites-container">
+      <div class="trendingFavorites-header">
+        <h2 class="trendingFavorites-title">Favorites</h2>
+      </div>
+
+      <article class="trendingFavorites-movieList" id="movieListFavorites">
+        
+        <div class="movie-container movie-container--loading"></div>
+
+        <div class="movie-container movie-container--loading"></div>
+
+        <div class="movie-container movie-container--loading"></div>
+
+      
+      </article>
+    </section>
+
+    <footer>Web made by @Decs_Code!</footer>
   </div>
     
   
