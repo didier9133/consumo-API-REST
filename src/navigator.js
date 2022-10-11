@@ -55,8 +55,9 @@ window.addEventListener('hashchange', navigation,false)
 window.addEventListener('scroll',(e)=>{
     const {clientHeight, scrollTop, scrollHeight}=document.documentElement
     
-    if(clientHeight+scrollTop+300>= scrollHeight && location.hash.startsWith('#trends')) {
+    if(clientHeight+scrollTop+500>= scrollHeight && location.hash.startsWith('#trends')) {
         console.log('bottom')
+      
         return  trendPage()
     } 
     
