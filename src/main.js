@@ -121,7 +121,9 @@ function render(movies, container,{lazy=false,clean=true}={}){
             class="movie-img"
             alt="${i.title}"
             />
-            <button data-title=${i.title} data-poster=${i.poster_path} class="${className}" id='A${i.id}' >❤</button> 
+            <button data-title=${i.title} data-poster=${i.poster_path} class="${className}" id='A${i.id}' >
+                <i class="fa-regular fa-heart"></i>
+            </button> 
         </div>`
     }).join('')
     
