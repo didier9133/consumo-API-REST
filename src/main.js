@@ -170,5 +170,11 @@ function getMovieFavorites(){
         localStorage.setItem('liked_movies',JSON.stringify( parseo))
     }
     const movieData=Object.values(parseo)
-    render(movieData, movieListFavorite, {lazy:true, clean:true})
+    if(movieData.length<1){
+        let view=` <span class="noFavorites" id="spanAlternativo">You haven't added favorite movies yet...</span>`
+        return movieListFavorite.innerHTML=view
+        
+    } else{
+       return render(movieData, movieListFavorite, {lazy:true, clean:true})
+    }
 }
