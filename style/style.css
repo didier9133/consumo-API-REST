@@ -93,24 +93,26 @@ button {
 
 
 /* Shared */
-.header-container, .trendingPreview-header, .categoriesPreview-container {
+.header-container, .trendingPreview-header, .categoriesPreview-container, .trendingFavorites-header{
   padding: 0 24px;
 }
 
-.trendingPreview-container, .categoriesPreview-container, footer {
+.trendingPreview-container, .categoriesPreview-container, footer, .trendingFavorites-container {
   margin-top: 48px;
 }
 
-.trendingPreview-header, .categoriesPreview-title {
+.trendingPreview-header, .categoriesPreview-title, .trendingFavorites-header {
   margin-bottom: 24px;
 }
 
 .movie-container {
   cursor: pointer;
+  position: relative;
 }
 
 .movie-img {
   border-radius: 8px;
+  min-height: 120px;
 }
 
 .categoriesPreview-list, .categories-list {
@@ -121,6 +123,60 @@ button {
   flex-wrap: wrap;
 }
 
+.movie-container--loading{
+  background: var(--purple-light-2);
+  border-radius: 8px;
+  height: 225px;
+  min-height: 225px;
+  max-height: 225px;
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  margin-bottom: 15px;
+  animation: loading-skeleton infinite 6s;
+}
+.movie-container--loading:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.movie-container--loading:nth-child(2) {
+  animation-delay: 1s;
+}
+.movie-container--loading:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.category-container--loading{
+  background: var(--purple-light-2);
+  border-radius: 8px;
+  height: 25px;
+  min-height: 25px;
+  max-height: 25px;
+  width: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  margin-bottom: 15px;
+  animation: loading-skeleton infinite 6s;
+}
+
+.category-container--loading:nth-child(2) {
+  animation-delay: 2s;
+}
+
+#lenguage{
+  position: absolute;
+  top: 34px;
+  right: 24px;
+  color: var(--purple-dark-2);
+  border: 1px solid var(--purple-medium-3);
+  border-radius: 10px;
+  padding: 4px;
+  z-index: 10;
+  transform: translatey(50%);
+  width: 72px;
+  
+}
+
 
 /* Header */
 .header-container {
@@ -128,7 +184,7 @@ button {
 }
 
 .header-container--long {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 19.27%, rgba(0, 0, 0, 0) 29.17%), url(https://pics.filmaffinity.com/Deadpool-777527803-large.jpg);
+  /* background: linear-gradient(180deg, rgba(0, 0, 0, 0.35) 19.27%, rgba(0, 0, 0, 0) 29.17%), url(https://pics.filmaffinity.com/Deadpool-777527803-large.jpg); */
   background-size: cover !important;
   height: 480px;
   position: fixed;
@@ -178,7 +234,7 @@ button {
 
 
 /* Trending */
-.trendingPreview-header {
+.trendingPreview-header, .trendingFavorites-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -190,7 +246,7 @@ button {
   width: 72px;
 }
 
-.trendingPreview-movieList {
+.trendingPreview-movieList, .trendingFavorites-movieList {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -199,12 +255,20 @@ button {
   padding-bottom: 16px;
 }
 
-.trendingPreview-movieList .movie-container {
+.trendingPreview-movieList .movie-container, .trendingFavorites-movieList .movie-container {
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 12px;
+  
+}
+.trendingPreview-movieList .movie-container:hover, .trendingFavorites-movieList .movie-container:hover{
+  transform: scale(1.1);
+  z-index: 100;
+  transition: transform 1s;
 }
 
-.trendingPreview-movieList .movie-container .movie-img {
+
+
+.trendingPreview-movieList .movie-container .movie-img,.trendingFavorites-movieList .movie-container .movie-img {
   height: 225px;
   min-height: 225px;
   max-height: 225px;
@@ -269,7 +333,7 @@ button {
 
 .genericList-container .movie-container {
   display: inline-block;
-  width: 30%;
+  width: 45%;
 }
 
 .genericList-container .movie-img {
@@ -342,6 +406,10 @@ button {
   min-height: 187.5px;
   max-height: 187.5px;
 }
+
+.padding{
+  padding: 0;
+}
   
 
 /* Footer */
@@ -361,6 +429,46 @@ footer {
   display: none !important;
 }
 
+/* Animations */
+@keyframes loading-skeleton {
+  0%{
+    opacity: 100%;
+  }
+  25%{
+    opacity: 75%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  75%{
+    opacity: 25%;
+  }
+  100%{
+    opacity: 0%;
+  }
+}
+
+.guardar{
+  
+  position: absolute;
+  padding: 6px 8px;
+  bottom: 0;
+  right: 10px;
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  font-size: 24px;
+  border-radius: 50%;
+  background:var(--purple-dark-1);
+  cursor: pointer;
+  
+}
+
+.classHover{
+  color: #e91e63;
+  transform: scale(1.2);
+}
+
+
 @media (min-width: 600px){
   body{
     background-color: var(--purple-medium-1);
@@ -370,6 +478,7 @@ footer {
     max-width: 700px;
     margin: 0 auto;
     background-color: white;
+    position: relative;
     
   }
 

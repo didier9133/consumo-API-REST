@@ -29,3 +29,7 @@ const movieDetailScore = document.querySelector('.movieDetail-score');
 const containerDetail=document.querySelector('.containerDetail')
 const footer=document.querySelector('footer')
 const full_container=document.querySelector('#full-container')
+const prueba=document.getElementById('prueba')
+const movieListFavorite=document.getElementById('movieListFavorites')
+const trendingFavorites=document.getElementById('trendingFavorites')
+const lenguaje=document.getElementById('lenguage')
