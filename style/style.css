@@ -461,9 +461,9 @@ footer {
   
 }
 
-/* .guardar::before{
-  content: '';
-} */
+.guardar::before{
+  content: '🤍';
+}
 
 /* .classHover {
 
@@ -472,7 +472,7 @@ footer {
 
 
 .classHover::before{
-  content: '🍕';
+  content: '❤';
 }
 
 .noFavorites{

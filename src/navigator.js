@@ -57,16 +57,15 @@ window.addEventListener('scroll',(e)=>{
     
     if(clientHeight+scrollTop+500>= scrollHeight && location.hash.startsWith('#trends')) {
         console.log('bottom')
-      
         return  trendPage()
     } 
     
-    if(clientHeight+scrollTop+300>= scrollHeight && location.hash.startsWith('#category=')){
+    if(clientHeight+scrollTop+500>= scrollHeight && location.hash.startsWith('#category=')){
         console.log('bottom')
         return categoriesPage();
     }
 
-    if(clientHeight+scrollTop+300>= scrollHeight && location.hash.startsWith('#search=')){
+    if(clientHeight+scrollTop+500>= scrollHeight && location.hash.startsWith('#search=')){
         console.log('bottom')
         return searchPage();
     }
