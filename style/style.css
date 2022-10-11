@@ -250,10 +250,13 @@ button {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-  height: 241px;
+  height: 250px;
   padding-left: 24px;
   padding-bottom: 16px;
+
 }
+
+
 
 .trendingPreview-movieList .movie-container, .trendingFavorites-movieList .movie-container {
   display: inline-block;
@@ -454,8 +457,6 @@ footer {
   padding: 6px 8px;
   bottom: 0;
   right: 10px;
-  color: transparent;
-  -webkit-text-stroke: 2px white;
   font-size: 24px;
   border-radius: 50%;
   background:var(--purple-dark-1);
@@ -465,7 +466,15 @@ footer {
 
 .classHover{
   color: #e91e63;
-  transform: scale(1.2);
+}
+
+.noFavorites{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: var(--purple-medium-2);
 }
 
 
