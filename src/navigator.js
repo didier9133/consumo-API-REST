@@ -55,17 +55,17 @@ window.addEventListener('hashchange', navigation,false)
 window.addEventListener('scroll',(e)=>{
     const {clientHeight, scrollTop, scrollHeight}=document.documentElement
     
-    if(clientHeight+scrollTop+100>= scrollHeight && location.hash.startsWith('#trends')) {
+    if(clientHeight+scrollTop+300>= scrollHeight && location.hash.startsWith('#trends')) {
         console.log('bottom')
         return  trendPage()
     } 
     
-    if(clientHeight+scrollTop+100>= scrollHeight && location.hash.startsWith('#category=')){
+    if(clientHeight+scrollTop+300>= scrollHeight && location.hash.startsWith('#category=')){
         console.log('bottom')
         return categoriesPage();
     }
 
-    if(clientHeight+scrollTop+100>= scrollHeight && location.hash.startsWith('#search=')){
+    if(clientHeight+scrollTop+300>= scrollHeight && location.hash.startsWith('#search=')){
         console.log('bottom')
         return searchPage();
     }
