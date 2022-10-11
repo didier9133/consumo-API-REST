@@ -264,11 +264,7 @@ button {
   margin-right: 12px;
   
 }
-.trendingPreview-movieList .movie-container:hover, .trendingFavorites-movieList .movie-container:hover{
-  transform: scale(1.1);
-  z-index: 100;
-  transition: transform 1s;
-}
+
 
 
 
@@ -462,7 +458,8 @@ footer {
   border-radius: 50%;
   background:var(--purple-dark-1);
   cursor: pointer;
-  color: var(--purple-light-1);
+  -webkit-text-stroke: 2px white;
+  color: transparent
   
 }
 
@@ -521,5 +518,11 @@ footer {
   
   .relatedMovies-scrollContainer{
     width: -webkit-fill-available;
+  }
+
+  .trendingPreview-movieList .movie-container:hover, .trendingFavorites-movieList .movie-container:hover{
+    transform: scale(1.1);
+    z-index: 100;
+    transition: transform 1s;
   }
 }
